@@ -1,12 +1,20 @@
-function generateRecipe(event) {
-  event.preventDefault();
-
+function displayRecipe(response) {
   new Typewriter("#result", {
-    strings: "chicken noodle soup",
+    strings: response.data.answer,
     autoStart: true,
     delay: 1,
     cursor: null,
   });
+}
+function generateRecipe(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search");
+  let key = "ff75abb34ct90a06od4bb7b7d6e9f5a8";
+  let context =
+    "You are a high class chef with many years of experience in multiple cuisines. Your mission is to provide a recipe name with the ingredient provided and a link to the recipe. Your answer should be easy to read, concise and short";
+  let prompt = `Generate a recipe that contains ${searchInput.value}`;
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${key}`;
+  axios.get(apiUrl).then(displayRecipe);
 }
 
 let recipeFormElement = document.querySelector("#recipe-generator-form");
