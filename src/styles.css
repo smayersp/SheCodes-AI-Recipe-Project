@@ -1,6 +1,6 @@
 body {
   background-color: #f9f7fe;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 h1 {
   text-align: center;
@@ -56,6 +56,6 @@ footer {
   background-color: white;
   padding: 20px;
   line-height: 2;
-  border-left: #885df1;
+  border-left: 3px solid #885df1;
   box-shadow: 0px 20px 60px rgba(39, 33, 66, 0.3);
 }
