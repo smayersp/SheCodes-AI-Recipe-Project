@@ -12,19 +12,22 @@
     <div class="container">
       <header><h1>AI Recipe Generator</h1></header>
       <main>
-        <form id="recipe-generator-form">
-          <input
-            type="text"
-            class="search"
-            id="search"
-            placeholder="Enter the main ingredient name"
-            required
-            autofocus
-            autocomplete="off"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="result" id="result"></div>
+        <div class="form-container">
+          <form id="recipe-generator-form">
+            <input
+              type="text"
+              class="search"
+              id="search"
+              placeholder="Enter the main ingredient name"
+              required
+              autofocus
+              autocomplete="off"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: Tomato, Chicken or Beef</div>
+        </div>
+        <div class="result hidden" id="result"></div>
       </main>
       <footer>
         This project was coded by Shaira Mayers and is open-sourced on
